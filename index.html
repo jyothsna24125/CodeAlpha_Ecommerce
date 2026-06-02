@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My E-Commerce Store</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+header{
+    background:#1f2937;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+header h1{
+    margin-bottom:10px;
+}
+
+.cart-info{
+    font-size:18px;
+}
+
+.products{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    padding:40px;
+}
+
+.card{
+    background:white;
+    width:280px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+    text-align:center;
+}
+
+.card h2{
+    margin-bottom:10px;
+}
+
+.price{
+    color:green;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#1f2937;
+    color:white;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🛒 My E-Commerce Store</h1>
+<p>Welcome! Shop the best products at affordable prices.</p>
+    <div class="cart-info">
+        Cart Items: <span id="count">0</span> |
+        Total Price: $<span id="total">0</span>
+        <br><br>
+<button onclick="checkout()">
+    Checkout
+</button>
+    </div>
+</header>
+<div style="text-align:center; margin:20px;">
+    <input
+        type="text"
+        id="search"
+        placeholder="Search products..."
+        onkeyup="searchProducts()"
+        style="padding:10px; width:300px;">
+</div>
+<section class="products">
+
+    <div class="card" id="laptop"> 
+        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600" alt="Laptop">
+        <div class="card-content">
+            <h2>Laptop</h2>
+            <p class="price">$500</p>
+            <button onclick="addToCart(500)">Add To Cart</button>
+        </div>
+    </div>
+
+    <div class="card" id="phone">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600" alt="Phone">
+        <div class="card-content">
+            <h2>Phone</h2>
+            <p class="price">$300</p>
+            <button onclick="addToCart(300)">Add To Cart</button>
+        </div>
+    </div>
+
+    <div class="card" id="headphones">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600" alt="Headphones">
+        <div class="card-content">
+            <h2>Headphones</h2>
+            <p class="price">$50</p>
+            <button onclick="addToCart(50)">Add To Cart</button>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 My E-Commerce Store
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
