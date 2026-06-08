@@ -30,4 +30,4 @@ Open index.html in browser
 - GET /api/products
 
 ## 👨‍💻 Author
-My First Ecommerce Project
+Y.Jyothsna
